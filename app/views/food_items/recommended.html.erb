@@ -1,9 +1,9 @@
 <div class="w-full">
-  <div class=" bg-amber-300 py-4 px-2 flex gap-2">
-    <%= image_tag path_to_asset("logo.svg"), class: "size-10" %>
-    <p class="text-3xl font-semibold">Tasty Everyday</p>
-  </div>
-  <h1 class="font-medium text-xl underline my-2">เมนูแนะนำ</h1>
+  <%= render 'header' %>
+  <nav class="flex gap-4 items-center my-2" >
+    <h1 class="font-medium text-xl underline">เมนูแนะนำ</h1>
+    <%= link_to 'เมนูทั้งหมด', food_items_path, class:"font-medium text-xl" %>
+  </nav>
   <% @recommended_foods_by_category.each do |category, recommended_foods| %>
     <div class="font-medium my-4 text-2xl"><%= category %></div>
     <ul class="flex flex-col gap-2">

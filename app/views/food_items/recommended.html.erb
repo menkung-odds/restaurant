@@ -10,7 +10,7 @@
     <div class="font-medium my-4 text-2xl px-2"><%= category %></div>
     <ul class="flex flex-col gap-2 px-2">
       <% recommended_foods.each do |food| %>
-        <li class="flex items-center border-b border-gray-200 py-4 rounded-lg shadow-sm">
+        <li class="flex items-center border-b border-gray-200 pb-4 rounded-lg shadow-sm">
           <!-- Image Section -->
           <div class="w-1/4 h-24 overflow-hidden rounded-lg bg-gray-100">
             <%= image_tag(food.image_url.presence || '/images/placeholder-food.jpg', alt: food.name, class: 'w-full h-full object-cover') %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_04_054649) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_04_081345) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -33,10 +33,10 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_054649) do
     t.integer "quantity"
     t.float "total_price"
     t.string "note"
-    t.integer "menu_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["menu_id"], name: "index_orders_on_menu_id"
+    t.integer "food_item_id", null: false
+    t.index ["food_item_id"], name: "index_orders_on_food_item_id"
   end
 
   create_table "set_menus", force: :cascade do |t|
@@ -53,7 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_054649) do
   end
 
   add_foreign_key "food_items", "categories"
-  add_foreign_key "orders", "menus"
+  add_foreign_key "orders", "food_items"
   add_foreign_key "set_menus", "food_items", column: "beverage_id"
   add_foreign_key "set_menus", "food_items", column: "dessert_id"
   add_foreign_key "set_menus", "food_items", column: "main_dish_id"

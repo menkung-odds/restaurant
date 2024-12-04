@@ -58,13 +58,11 @@ class OrdersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params.expect(:id))
     end
 
-    # Only allow a list of trusted parameters through.
     def order_params
-      params.expect(order: [ :quantity, :total_price, :note, :menu_id ])
+      params.expect(order: [ :quantity, :total_price, :note, :food_item_id ])
     end
 end

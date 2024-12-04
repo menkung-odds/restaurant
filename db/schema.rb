@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_04_053216) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_04_054649) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -29,6 +29,16 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_053216) do
     t.index ["category_id"], name: "index_food_items_on_category_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.integer "quantity"
+    t.float "total_price"
+    t.string "note"
+    t.integer "menu_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["menu_id"], name: "index_orders_on_menu_id"
+  end
+
   create_table "set_menus", force: :cascade do |t|
     t.string "name"
     t.integer "main_dish_id", null: false
@@ -42,19 +52,8 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_053216) do
     t.index ["main_dish_id"], name: "index_set_menus_on_main_dish_id"
   end
 
-
-  create_table "orders", force: :cascade do |t|
-    t.integer "quantity"
-    t.float "total_price"
-    t.string "note"
-    t.integer "menu_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["menu_id"], name: "index_orders_on_menu_id"
-  end
-
-  add_foreign_key "orders", "menus"
   add_foreign_key "food_items", "categories"
+  add_foreign_key "orders", "menus"
   add_foreign_key "set_menus", "beverages"
   add_foreign_key "set_menus", "desserts"
   add_foreign_key "set_menus", "main_dishes"

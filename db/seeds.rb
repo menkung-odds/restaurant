@@ -1,5 +1,5 @@
 [
-  "ข้าว", "ก๋วยเตี๋ยว", "อาหารจารพิเศษ", "ของหวานแนะนำ", "เครื่องดื่มแนะนำ"
+  "ข้าว", "ก๋วยเตี๋ยว", "อาหารจารพิเศษ", "ของหวาน", "เครื่องดื่ม"
 ].each do |category|
   Category.find_or_create_by!(name: category)
 end
@@ -130,7 +130,7 @@ end
     detail: "ข้าวเหนียวมูนหอมมันกับทุเรียนสด",
     price: 120,
     recommended: true,
-    category_id: Category.find_by(name: "ของหวานแนะนำ").id,
+    category_id: Category.find_by(name: "ของหวาน").id,
     image_url: "https://naturalpalm.com/wp-content/uploads/2018/05/Bee_Khao_Neow_Durian_yhingthai.jpg"
   },
   {
@@ -138,7 +138,7 @@ end
     detail: "เครปเค้กชั้นบางหอมมะพร้าว",
     price: 150,
     recommended: true,
-    category_id: Category.find_by(name: "ของหวานแนะนำ").id,
+    category_id: Category.find_by(name: "ของหวาน").id,
     image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DU_-hQubmWCcH9rEBuwiitxwjTK8Y0F2BA&s"
   },
   {
@@ -146,7 +146,7 @@ end
     detail: "ชีสเค้กเนื้อนุ่มซอสเบอร์รี่สด",
     price: 140,
     recommended: true,
-    category_id: Category.find_by(name: "ของหวานแนะนำ").id,
+    category_id: Category.find_by(name: "ของหวาน").id,
     image_url: "https://basketeer.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/06/23140112/CK23-25-1.jpg"
   },
   {
@@ -154,7 +154,7 @@ end
     detail: "บราวนี่เนื้อหนึบหอมช็อกโกแลตแท้",
     price: 100,
     recommended: true,
-    category_id: Category.find_by(name: "ของหวานแนะนำ").id,
+    category_id: Category.find_by(name: "ของหวาน").id,
     image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCvdEPuUE-u7QR3t8yKnSXyIHEkEwTHuxM3g&s"
   },
   {
@@ -162,7 +162,7 @@ end
     detail: "ไอศกรีมทำจากมะพร้าวน้ำหอมสด",
     price: 80,
     recommended: true,
-    category_id: Category.find_by(name: "ของหวานแนะนำ").id,
+    category_id: Category.find_by(name: "ของหวาน").id,
     image_url: "https://img.wongnai.com/p/1920x0/2019/04/06/7946980bfba949b295aeb248aba82bad.jpg"
   },
   {
@@ -170,7 +170,7 @@ end
     detail: "น้ำลิ้นจี่หอมหวานเติมความซ่าสดชื่น",
     price: 60,
     recommended: true,
-    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    category_id: Category.find_by(name: "เครื่องดื่ม").id,
     image_url: "https://www.cheewajit.com/app/uploads/2016/07/186-recipe-05.jpg"
   },
   {
@@ -178,7 +178,7 @@ end
     detail: "ชานมหวานหอมไข่มุกหนึบ",
     price: 70,
     recommended: true,
-    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    category_id: Category.find_by(name: "เครื่องดื่ม").id,
     image_url: "https://mabintea.com/wp-content/uploads/2022/07/ชานมไข่มุก-ชานมไต้หวัน.jpg"
   },
   {
@@ -186,7 +186,7 @@ end
     detail: "น้ำเสาวรสสดเติมความเปรี้ยวหวาน",
     price: 75,
     recommended: true,
-    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    category_id: Category.find_by(name: "เครื่องดื่ม").id,
     image_url: "https://www.akerufeed.com/wp-content/uploads/2020/04/o-800x800.jpg"
   },
   {
@@ -194,7 +194,7 @@ end
     detail: "น้ำขิงหอมละมุนผสมมะนาวสด",
     price: 50,
     recommended: true,
-    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    category_id: Category.find_by(name: "เครื่องดื่ม").id,
     image_url: "https://s.isanook.com/he/0/ud/1/9265/ginger-lime-lemon.jpg?ip/resize/w850/q80/jpg"
   },
   {
@@ -202,7 +202,7 @@ end
     detail: "น้ำผลไม้สดชื่นเพื่อสุขภาพ",
     price: 50,
     recommended: true,
-    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    category_id: Category.find_by(name: "เครื่องดื่ม").id,
     image_url: "https://obs-ect.line-scdn.net/r/ect/ect/image_167898733593414136222df9101t114f7737/s860p"
   }
 ].each do |item|

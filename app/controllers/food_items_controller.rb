@@ -57,6 +57,14 @@ class FoodItemsController < ApplicationController
     end
   end
 
+  def recommended
+    @recommended_foods_by_category = {}
+    Category.all.each do |category|
+      @recommended_foods_by_category[category.name] = FoodItem.where(recommended: true, category_id: category.id)
+      puts "name : #{category.name}, count : #{@recommended_foods_by_category[category.name].count}"
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_food_item

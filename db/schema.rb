@@ -54,7 +54,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_04_054649) do
 
   add_foreign_key "food_items", "categories"
   add_foreign_key "orders", "menus"
-  add_foreign_key "set_menus", "beverages"
-  add_foreign_key "set_menus", "desserts"
-  add_foreign_key "set_menus", "main_dishes"
+  add_foreign_key "set_menus", "food_items", column: "beverage_id"
+  add_foreign_key "set_menus", "food_items", column: "dessert_id"
+  add_foreign_key "set_menus", "food_items", column: "main_dish_id"
 end

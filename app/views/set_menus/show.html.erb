@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @set_menu %>
+
+<div>
+  <%= link_to "Edit this set menu", edit_set_menu_path(@set_menu) %> |
+  <%= link_to "Back to set menus", set_menus_path %>
+
+  <%= button_to "Destroy this set menu", @set_menu, method: :delete %>
+</div>

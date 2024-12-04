@@ -1,20 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<!-- ใช้ min-h-screen เพื่อให้เต็มหน้าจอ -->
-<div class="min-h-screen flex flex-col space-y-6 w-full bg-gray-50 py-8">
-  <!-- Header -->
+<div class="min-h-screen flex flex-col -y-space6 w-full bg-gray-50 ">
+ 
   <%= render 'food_items/header' %>
 
-  <!-- Title and Link -->
+
   <div class="container mx-auto px-4">
     <%= content_for :title, "Food items" %>
     <%= link_to "New food item", new_food_item_path, class: "text-blue-600 hover:underline" %>
   </div>
 
-  <!-- Food Button -->
   <%= render 'food_items/food_button' %>
 
-  <!-- Menu Cards -->
+
   <div class="container mx-auto px-4 flex flex-col space-y-4">
     <%= render 'food_items/all_menu/card' %>
   </div>

@@ -1,15 +1,3 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
-
-
-
 [
   "ข้าว", "ก๋วยเตี๋ยว", "อาหารจารพิเศษ", "ของหวานแนะนำ", "เครื่องดื่มแนะนำ"
 ].each do |category|
@@ -23,7 +11,7 @@ end
     price: 150,
     recommended: true,
     category_id: Category.find_by(name: "ข้าว").id,
-    image_url: "https://www.thammculture.com/wp-content/uploads/2021/01/Untitled-3-re.jpg"
+    image_url: "https://img-global.cpcdn.com/recipes/757b3074d1300d2d/680x482cq70/รป-หลก-ของ-สตร-ขาวผดนำพรกกงเสยบไขเคม.jpg"
   },
   {
     name: "ข้าวหน้าเนื้อย่างแจ่ว",
@@ -31,7 +19,7 @@ end
     price: 180,
     recommended: true,
     category_id: Category.find_by(name: "ข้าว").id,
-    image_url: "https://www.thammculture.com/wp-content/uploads/2021/01/Untitled-3-re.jpg"
+    image_url: "https://scontent.fbkk7-3.fna.fbcdn.net/v/t1.6435-9/93095056_2697335117056284_3060831206821068800_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=cmzRuvPVrPAQ7kNvgH0VzVk&_nc_zt=23&_nc_ht=scontent.fbkk7-3.fna&_nc_gid=AQoEYnu67XpF_gdRUKzii4m&oh=00_AYB488w91G2LEZLk0d9rloGx6vYJr106MeI-BtjKMPtbgQ&oe=67775B5A"
   },
   {
     name: "ข้าวหน้ากุ้งเทมปุระ",
@@ -39,7 +27,7 @@ end
     price: 170,
     recommended: true,
     category_id: Category.find_by(name: "ข้าว").id,
-    image_url: "https://www.thammculture.com/wp-content/uploads/2021/01/Untitled-3-re.jpg"
+    image_url: "https://www.1376delivery.com/productimages/TEN%20DON.jpg"
   },
   {
     name: "ข้าวไข่ข้นแฮมชีส",
@@ -47,7 +35,7 @@ end
     price: 120,
     recommended: true,
     category_id: Category.find_by(name: "ข้าว").id,
-    image_url: "https://www.thammculture.com/wp-content/uploads/2021/01/Untitled-3-re.jpg"
+    image_url: "https://i.ytimg.com/vi/kyknVwkFesY/maxresdefault.jpg"
   },
   {
     name: "ข้าวราดผัดฉ่าทะเล",
@@ -55,7 +43,7 @@ end
     price: 160,
     recommended: true,
     category_id: Category.find_by(name: "ข้าว").id,
-    image_url: "https://www.thammculture.com/wp-content/uploads/2021/01/Untitled-3-re.jpg"
+    image_url: "https://img.wongnai.com/p/1920x0/2018/04/18/00573c3fa8cf4d0390b3325a942664dd.jpg"
   },
   {
     name: "ก๋วยเตี๋ยวต้มยำหมูเด้ง",
@@ -63,7 +51,7 @@ end
     price: 90,
     recommended: true,
     category_id: Category.find_by(name: "ก๋วยเตี๋ยว").id,
-    image_url: "https://s359.kapook.com/pagebuilder/ae1b16d9-731c-4105-8898-7deaf90bc167.jpg"
+    image_url: "https://www.ryoiireview.com/upload/article/201705/1495168197_5218c16e7f4e06e6c00b8cd15b4b04e6.jpg"
   },
   {
     name: "บะหมี่เป็ดย่าง",
@@ -71,7 +59,7 @@ end
     price: 120,
     recommended: true,
     category_id: Category.find_by(name: "ก๋วยเตี๋ยว").id,
-    image_url: "https://s359.kapook.com/pagebuilder/ae1b16d9-731c-4105-8898-7deaf90bc167.jpg"
+    image_url: "https://www.ryoiireview.com/upload/article/202106/1624435498_64b8299d1597b8a5c7b9cb9c88642f6c.jpg"
   },
   {
     name: "ราเมงต้มยำกุ้งแม่น้ำ",
@@ -79,7 +67,7 @@ end
     price: 200,
     recommended: true,
     category_id: Category.find_by(name: "ก๋วยเตี๋ยว").id,
-    image_url: "https://s359.kapook.com/pagebuilder/ae1b16d9-731c-4105-8898-7deaf90bc167.jpg"
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLh1Ea_QrXw04EHPNsGrKf3-3L67SMbp15zQ&s"
   },
   {
     name: "ก๋วยเตี๋ยวหลอดไส้ทะเล",
@@ -87,7 +75,7 @@ end
     price: 140,
     recommended: true,
     category_id: Category.find_by(name: "ก๋วยเตี๋ยว").id,
-    image_url: "https://s359.kapook.com/pagebuilder/ae1b16d9-731c-4105-8898-7deaf90bc167.jpg"
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0gqMQPXcBfy9BBIelvisaGY1IJ5jFSoln1Q&s"
   },
   {
     name: "ก๋วยเตี๋ยวผัดซีอิ๊วทะเล",
@@ -95,7 +83,7 @@ end
     price: 100,
     recommended: true,
     category_id: Category.find_by(name: "ก๋วยเตี๋ยว").id,
-    image_url: "https://s359.kapook.com/pagebuilder/ae1b16d9-731c-4105-8898-7deaf90bc167.jpg"
+    image_url: "https://yalamarketplace.com/upload/1667825938444.jpg      "
   },
   {
     name: "สเต๊กเนื้อริบอายซอสพริกไทยดำ",
@@ -103,7 +91,7 @@ end
     price: 350,
     recommended: true,
     category_id: Category.find_by(name: "อาหารจารพิเศษ").id,
-    image_url: "https://business.hungryhub.com/wp-content/uploads/2022/11/16.webp"
+    image_url: "https://blog.hungryhub.com/wp-content/uploads/2021/06/ปกBlog-1024x684.jpeg"
   },
   {
     name: "ปลากะพงทอดราดพริกสามรส",
@@ -111,7 +99,7 @@ end
     price: 280,
     recommended: true,
     category_id: Category.find_by(name: "อาหารจารพิเศษ").id,
-    image_url: "https://business.hungryhub.com/wp-content/uploads/2022/11/16.webp"
+    image_url: "https://chefoldschool.com/wp-content/uploads/2022/11/1.png"
   },
   {
     name: "หอยแมลงภู่อบชีส",
@@ -119,7 +107,7 @@ end
     price: 200,
     recommended: true,
     category_id: Category.find_by(name: "อาหารจารพิเศษ").id,
-    image_url: "https://business.hungryhub.com/wp-content/uploads/2022/11/16.webp"
+    image_url: "https://img.wongnai.com/p/1920x0/2018/11/21/e3df3b89610e44b2a409e53827d01a75.jpg"
   },
   {
     name: "ยำรวมทะเล",
@@ -127,7 +115,7 @@ end
     price: 180,
     recommended: true,
     category_id: Category.find_by(name: "อาหารจารพิเศษ").id,
-    image_url: "https://business.hungryhub.com/wp-content/uploads/2022/11/16.webp"
+    image_url: "https://www.ajinomotofoodservicethailand.com/wp-content/uploads/2021/09/rd-1170x460.jpg"
   },
   {
     name: "ซี่โครงหมูอบน้ำผึ้ง",
@@ -135,7 +123,7 @@ end
     price: 220,
     recommended: true,
     category_id: Category.find_by(name: "อาหารจารพิเศษ").id,
-    image_url: "https://business.hungryhub.com/wp-content/uploads/2022/11/16.webp"
+    image_url: "https://img.wongnai.com/p/1920x0/2017/09/29/49a6655d22aa46f19905886eb6b05392.jpg"
   },
   {
     name: "ข้าวเหนียวทุเรียน",
@@ -151,7 +139,7 @@ end
     price: 150,
     recommended: true,
     category_id: Category.find_by(name: "ของหวานแนะนำ").id,
-    image_url: "https://naturalpalm.com/wp-content/uploads/2018/05/Bee_Khao_Neow_Durian_yhingthai.jpg"
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DU_-hQubmWCcH9rEBuwiitxwjTK8Y0F2BA&s"
   },
   {
     name: "ชีสเค้กมิกซ์เบอร์รี่",
@@ -159,7 +147,7 @@ end
     price: 140,
     recommended: true,
     category_id: Category.find_by(name: "ของหวานแนะนำ").id,
-    image_url: "https://naturalpalm.com/wp-content/uploads/2018/05/Bee_Khao_Neow_Durian_yhingthai.jpg"
+    image_url: "https://basketeer.s3.ap-south-1.amazonaws.com/wp-content/uploads/2023/06/23140112/CK23-25-1.jpg"
   },
   {
     name: "บราวนี่ช็อกโกแลตเข้มข้น",
@@ -167,7 +155,7 @@ end
     price: 100,
     recommended: true,
     category_id: Category.find_by(name: "ของหวานแนะนำ").id,
-    image_url: "https://naturalpalm.com/wp-content/uploads/2018/05/Bee_Khao_Neow_Durian_yhingthai.jpg"
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCvdEPuUE-u7QR3t8yKnSXyIHEkEwTHuxM3g&s"
   },
   {
     name: "ไอศกรีมมะพร้าวน้ำหอม",
@@ -175,7 +163,7 @@ end
     price: 80,
     recommended: true,
     category_id: Category.find_by(name: "ของหวานแนะนำ").id,
-    image_url: "https://naturalpalm.com/wp-content/uploads/2018/05/Bee_Khao_Neow_Durian_yhingthai.jpg"
+    image_url: "https://img.wongnai.com/p/1920x0/2019/04/06/7946980bfba949b295aeb248aba82bad.jpg"
   },
   {
     name: "น้ำลิ้นจี่โซดา",
@@ -183,7 +171,7 @@ end
     price: 60,
     recommended: true,
     category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
-    image_url: "https://inwfile.com/s-gd/oxjn35.jpg"
+    image_url: "https://www.cheewajit.com/app/uploads/2016/07/186-recipe-05.jpg"
   },
   {
     name: "ชานมไข่มุกบราวน์ชูการ์",
@@ -191,23 +179,31 @@ end
     price: 70,
     recommended: true,
     category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
-    image_url: "https://inwfile.com/s-gd/oxjn35.jpg"
+    image_url: "https://mabintea.com/wp-content/uploads/2022/07/ชานมไข่มุก-ชานมไต้หวัน.jpg"
   },
   {
-    name: "กาแฟเย็นลาวา",
-    detail: "กาแฟเย็นรสเข้มพร้อมฟองนมลาวา",
-    price: 90,
+    name: "ม็อกเทลเสาวรส",
+    detail: "น้ำเสาวรสสดเติมความเปรี้ยวหวาน",
+    price: 75,
     recommended: true,
     category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
-    image_url: "https://inwfile.com/s-gd/oxjn35.jpg"
+    image_url: "https://www.akerufeed.com/wp-content/uploads/2020/04/o-800x800.jpg"
   },
   {
-    name: "น้ำมะพร้าวสด",
-    detail: "น้ำมะพร้าวสดจากมะพร้าวธรรมชาติ",
+    name: "น้ำสมุนไพรขิงมะนาว",
+    detail: "น้ำขิงหอมละมุนผสมมะนาวสด",
     price: 50,
     recommended: true,
     category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
-    image_url: "https://inwfile.com/s-gd/oxjn35.jpg"
+    image_url: "https://s.isanook.com/he/0/ud/1/9265/ginger-lime-lemon.jpg?ip/resize/w850/q80/jpg"
+  },
+  {
+    name: "น้ำแตงกวาแอปเปิ้ลเขียว",
+    detail: "น้ำผลไม้สดชื่นเพื่อสุขภาพ",
+    price: 50,
+    recommended: true,
+    category_id: Category.find_by(name: "เครื่องดื่มแนะนำ").id,
+    image_url: "https://obs-ect.line-scdn.net/r/ect/ect/image_167898733593414136222df9101t114f7737/s860p"
   }
 ].each do |item|
   FoodItem.find_or_create_by!(

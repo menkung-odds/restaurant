@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
+<div class="flex flex-wrap">
 
-<%= render @food_item %>
+  <div class="flex items-center">
+    <%= link_to food_items_path, class: "flex justify-center items-center w-10 h-10 bg-white rounded-full shadow-md hover:bg-gray-200" do %>
+      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 13L1 7L7 1" stroke="#21272A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    <% end %> 
+  </div>
 
-<div>
-  <%= link_to "Edit this food item", edit_food_item_path(@food_item) %> |
-  <%= link_to "Back to food items", food_items_path %>
-
-  <%= button_to "Destroy this food item", @food_item, method: :delete %>
+  <%= render @food_item %>
 </div>
+

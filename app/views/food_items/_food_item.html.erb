@@ -1,3 +1,4 @@
+<!-- Food Item Show Page -->
 <div id="food-item-show-page" class="mx-auto container w-full flex flex-col items-center px-6 sm:px-0 text-center">
   <% if food_item&.image_url.present? %>
     <div id="food-item-image" class="py-[16px]">
@@ -29,11 +30,11 @@
   </div>
 </div>
 
-<!-- Hidden Checkbox -->
+<!-- Hidden Checkbox for Modal Trigger -->
 <input type="checkbox" id="order-modal" class="hidden peer">
 
 <!-- Modal -->
-<div class="fixed inset-0 bg-gray-800 bg-opacity-50  items-center justify-center hidden peer-checked:flex">
+<div class="fixed inset-0 bg-gray-800 bg-opacity-50 items-center justify-center hidden peer-checked:flex">
   <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
     <h2 class="text-2xl font-bold mb-4">Order <%= food_item.name %></h2>
     <p class="mb-4">Price: $<%= food_item.price %></p>
@@ -53,51 +54,34 @@
     <% end %>
   </div>
 </div>
-<div c
-lass="fixed inset-0 bg-gray-800 bg-opacity-50  items-center justify-center hidden peer-checked:flex">
-<div class="bg-white rounded-lg w-1/3 p-6">
-  <h2 class="text-2xl font-semibold mb-4">สั่งอาหาร</h2>
 
-  <!-- Food Name -->
-  <div class="mb-4">
-    <label for="foodName" class="block text-sm font-medium">ชื่ออาหาร</label>
-    <input id="foodName" type="text" class="w-full border border-gray-300 rounded px-3 py-2">
-  </div>
+<!-- Modal Close Button -->
+<div class="fixed inset-0 bg-gray-800 bg-opacity-50 items-center justify-center hidden peer-checked:flex">
+  <div class="bg-white rounded-lg w-1/3 p-6">
+    <h2 class="text-2xl font-semibold mb-4">สั่งอาหาร</h2>
 
-  <!-- Quantity -->
-  <div class="mb-4 flex items-center">
-    <label class="block text-sm font-medium mr-4">จำนวนจาน</label>
-    <input id="quantity" type="number" value="1" min="1" class="mx-2 w-16 text-center border border-gray-300 rounded">
-  </div>
+    <!-- Food Name -->
+    <div class="mb-4">
+      <label for="foodName" class="block text-sm font-medium">ชื่ออาหาร</label>
+      <input id="foodName" type="text" class="w-full border border-gray-300 rounded px-3 py-2" value="<%= food_item.name %>" readonly>
+    </div>
 
-  <!-- Notes for Chef -->
-  <div class="mb-4">
-    <label for="note" class="block text-sm font-medium">หมายเหตุสำหรับเชฟ</label>
-    <textarea id="note" rows="3" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
-  </div>
+    <!-- Quantity -->
+    <div class="mb-4 flex items-center">
+      <label class="block text-sm font-medium mr-4">จำนวนจาน</label>
+      <input id="quantity" type="number" value="1" min="1" class="mx-2 w-16 text-center border border-gray-300 rounded">
+    </div>
 
-  <!-- Buttons -->
-  <div class="flex justify-end">
-    <button id="cancelAction" class="mr-4 bg-gray-300 px-4 py-2 rounded">ยกเลิก</button>
-    <button id="confirmAction" class="bg-blue-500 text-white px-4 py-2 rounded">สั่งอาหาร</button>
-  </div>
-</div>
+    <!-- Notes for Chef -->
+    <div class="mb-4">
+      <label for="note" class="block text-sm font-medium">หมายเหตุสำหรับเชฟ</label>
+      <textarea id="note" rows="3" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+    </div>
 
-  <!-- Quantity -->
-  <div class="mb-4 flex items-center">
-    <label class="block text-sm font-medium mr-4">จำนวนจาน</label>
-    <input id="quantity" type="number" value="1" min="1" class="mx-2 w-16 text-center border border-gray-300 rounded">
-  </div>
-
-  <!-- Notes for Chef -->
-  <div class="mb-4">
-    <label for="note" class="block text-sm font-medium">หมายเหตุสำหรับเชฟ</label>
-    <textarea id="note" rows="3" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
-  </div>
-
-  <!-- Buttons -->
-  <div class="flex justify-end">
-    <button id="cancelAction" class="mr-4 bg-gray-300 px-4 py-2 rounded">ยกเลิก</button>
-    <button id="confirmAction" class="bg-blue-500 text-white px-4 py-2 rounded">สั่งอาหาร</button>
+    <!-- Buttons -->
+    <div class="flex justify-end">
+      <button id="cancelAction" class="mr-4 bg-gray-300 px-4 py-2 rounded">ยกเลิก</button>
+      <button id="confirmAction" class="bg-blue-500 text-white px-4 py-2 rounded">สั่งอาหาร</button>
+    </div>
   </div>
 </div>

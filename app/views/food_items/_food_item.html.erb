@@ -10,9 +10,13 @@
       <%= food_item.name %>
     </div>
     <div id="food-item-description" class="prose max-w-full mx-auto">
+      <div>
+         <% if food_item.recommended %>
+          <span class="bg-orange-100 rounded-full px-5">เมนูแนะนำพิเศษ</span>
+        <% end %>
+      </div>
       <p><strong>Description:</strong> <%= food_item.description %></p>
       <p><strong>Price:</strong> $<%= food_item.price %></p>
-      <p><strong>Recommended:</strong> <%= food_item.recommended ? "Yes" : "No" %></p>
       <p><strong>Category:</strong> <%= food_item.category.name if food_item.category.present? %></p>
     </div>
   </div>
@@ -46,7 +50,6 @@
       <div class="flex justify-between items-center">
         <%= f.submit "Order Now", class: "bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700" %>
       </div>
-      
     <% end %>
   </div>
 </div>

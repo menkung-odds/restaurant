@@ -1,32 +1,50 @@
-<div id="<%= dom_id food_item %>">
-  <p>
-    <strong>Name:</strong>
-    <%= food_item.name %>
-  </p>
+<div id="food-item-show-page" class="mx-auto container w-full flex flex-col items-center px-6 sm:px-0 text-center">
+  <% if food_item&.image_url.present? %>
+    <div id="food-item-image" class="py-[16px]">
+      <img src="<%= food_item.image_url %>" alt="<%= food_item.name %>" class="max-w-xs rounded-lg shadow-lg mx-auto">
+    </div>
+  <% end %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= food_item.description %>
-  </p>
+  <div id="food-item-content" class="w-full max-w-2xl flex flex-col gap-6">
+    <div id="food-item-details" class="text-base-content font-medium text-2xl pt-[32px] pb-[16px]">
+      <%= food_item.name %>
+    </div>
+    <div id="food-item-description" class="prose max-w-full mx-auto">
+      <p><strong>Description:</strong> <%= food_item.description %></p>
+      <p><strong>Price:</strong> $<%= food_item.price %></p>
+      <p><strong>Recommended:</strong> <%= food_item.recommended ? "Yes" : "No" %></p>
+      <p><strong>Category:</strong> <%= food_item.category.name if food_item.category.present? %></p>
+    </div>
+  </div>
 
-  <p>
-    <strong>Price:</strong>
-    <%= food_item.price %>
-  </p>
+  <!-- Order Button -->
+  <div class="pt-6">
+    <label for="order-modal" class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 cursor-pointer">
+      Order Now
+    </label>
+  </div>
+</div>
 
-  <p>
-    <strong>Recommended:</strong>
-    <%= food_item.recommended %>
-  </p>
+<!-- Hidden Checkbox -->
+<input type="checkbox" id="order-modal" class="hidden peer">
 
-  <p>
-    <strong>Image url:</strong>
-    <%= food_item.image_url %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= food_item.category_id %>
-  </p>
-
+<!-- Modal -->
+<div class="fixed inset-0 bg-gray-800 bg-opacity-50  items-center justify-center hidden peer-checked:flex">
+  <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+    <h2 class="text-2xl font-bold mb-4">Order <%= food_item.name %></h2>
+    <p class="mb-4">Price: $<%= food_item.price %></p>
+    <form action="<%= orders_path %>" method="POST">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= hidden_field_tag :food_item_id, food_item.id %>
+      <div class="mb-4">
+        <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" class="border border-gray-300 rounded-lg w-full px-3 py-2" required>
+      </div>
+      <div class="flex justify-between items-center">
+        <!-- Close Button -->
+        <label for="order-modal" class="text-gray-500 hover:underline cursor-pointer">Cancel</label>
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Confirm Order</button>
+      </div>
+    </form>
+  </div>
 </div>

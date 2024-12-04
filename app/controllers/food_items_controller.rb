@@ -4,10 +4,12 @@ class FoodItemsController < ApplicationController
   # GET /food_items or /food_items.json
   def index
     @food_items = FoodItem.all
+    @order = Order.new
   end
 
   # GET /food_items/1 or /food_items/1.json
   def show
+    @order = Order.new
   end
 
   # GET /food_items/new
